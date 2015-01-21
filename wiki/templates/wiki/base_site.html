@@ -59,12 +59,14 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+                  {% block user-menu-items %}
                   <li>
                     <a href="{% url 'wiki:logout' %}">
                       <i class="fa fa-power-off"></i>
                       {% trans "Log out" %}
                     </a>
                   </li>
+                  {% endblock user-menu-items%}
                   {% include "wiki/plugins/notifications/menubaritem.html" %}
                 </ul>
               </li>
